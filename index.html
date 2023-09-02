@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Jacques+Francois+Shadow&family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Rollercoaster</title>
+  </head>
+  <body>
+    <div id="column">
+      <div id="cartel">
+        <div id="indicaciones">
+          <h1>WELCOME TO THE FREAKIEST SHOW!</h1>
+          <br />
+          <h1>YOU MUST BE THIS TALL TO RIDE THIS RIDE AT THE CARNIVAL</h1>
+          <h2>-------- 160 cm --------</h2>
+          <div id="tarifa">
+            <h3>Adults: <span>$1000</span></h3>
+            <h3>Minors: <span>$500</span></h3>
+          </div>
+        </div>
+
+        <div id="largoFila">
+          <h2>Choose a queue length:</h2>
+          <button id="corta">Short</button> <br />
+          <button id="media">Medium</button> <br />
+          <button id="larga">Long</button>
+        </div>
+        <div id="alturaPersona"></div>
+
+        <div id="edadPersona"></div>
+
+        <div id="ganancias"></div>
+      </div>
+
+      <button id="queueBtn" class="animate__heartBeat">
+        <p>Get in the queue!</p>
+      </button>
+
+      <button class="disabledBtn" id="alturaBtn" disabled>
+        <p>Continue</p>
+      </button>
+      <button class="disabledBtn" id="edadBtn" disabled><p>Continue</p></button>
+      <button
+        class="disabledBtn"
+        id="resetBtn"
+        disabled
+        onclick="window.location.reload()"
+      >
+        <p>Reset</p>
+      </button>
+
+      <div id="climaContainer">
+        <button id="climaBtn">Consultar clima de Jupiter, Florida</button>
+        <div id="climaResultado"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

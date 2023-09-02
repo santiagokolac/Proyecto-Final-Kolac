@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../imgs/carnival-bg.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+#column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cartel {
+  width: 600px;
+  background-color: rgba(184, 145, 78, 0.9);
+  border-radius: 3%;
+  border: dashed 4px #902010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Jacques Francois Shadow", cursive;
+  padding: 2%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: 50vh;
+}
+
+#indicaciones h1 {
+  text-align: center;
+  color: #2b4055;
+  font-size: 2vw;
+  margin-bottom: 1vh;
+}
+
+#indicaciones h2 {
+  text-align: center;
+  color: #902010;
+  font-family: "IM Fell English", serif;
+  font-size: 2.2vw;
+  margin-bottom: 1vh;
+}
+
+#tarifa h3 {
+  text-align: center;
+  font-family: "MedievalSharp", cursive;
+  color: #2b4055;
+  font-size: 1.5vw;
+}
+
+#tarifa h3 span {
+  color: #902010;
+}
+
+button {
+  background-color: #b8914e;
+  margin-top: 2%;
+  width: 35%;
+  height: 10%;
+  border: dotted 3px #902010;
+}
+
+button p {
+  color: #2b4055;
+  font-size: 1vw;
+  font-weight: bolder;
+  text-align: center;
+  padding: 5px;
+}
+
+.disabledBtn {
+  background-color: rgba(184, 145, 78, 0.6);
+  border: dotted 3px rgba(144, 32, 16, 0.6);
+}
+/* //////////// */
+
+#largoFila button {
+  color: #2b4055;
+  background-color: #b8914e;
+  width: 50%;
+  height: 30%;
+  margin: 1.5vh 0vw 0vh 3vw;
+  border: dotted 2px #902010;
+}
+
+h2 {
+  color: #2b4055;
+}
+
+.personasLista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personaI {
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+.alturaInput {
+  width: 175%;
+}
+
+.edadInput {
+  width: 116%;
+}
+
+#largoFila,
+#alturaPersona,
+#edadPersona,
+#ganancias {
+  display: none;
+}
+
+#alturaBtn,
+#edadBtn,
+#resetBtn {
+  display: none;
+}
+
+#climaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#climaBtn {
+  color: #2b4055;
+  background-color: #b8914e;
+  border: dotted 3px #902010;
+  width: 79%;
+  height: 10%;
+  font-size: 0.8vw;
+  font-weight: bolder;
+  text-align: center;
+  padding: 5px;
+}
+
+#climaResultado {
+  background-color: rgb(184, 145, 78);
+  border: dotted 3px rgb(144, 32, 16);
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  display: none;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1700px) {
+  #indicaciones {
+    width: 50%;
+    height: auto;
+  }
+  #indicaciones h1 {
+    font-size: 2vw;
+  }
+  #indicaciones h2 {
+    font-size: 1.5vw;
+  }
+  #tarifa h3 {
+    font-size: 1.7vw;
+  }
+  button {
+    width: 40%;
+  }
+  button p {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #indicaciones {
+    width: 80%;
+    height: auto;
+  }
+  #indicaciones h1 {
+    font-size: 3.5vw;
+  }
+  #indicaciones h2 {
+    font-size: 3vw;
+  }
+  #tarifa h3 {
+    font-size: 2.3vw;
+  }
+  button {
+    width: 70%;
+    height: auto;
+  }
+  button p {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #indicaciones {
+    width: 95%;
+    height: auto;
+  }
+  #indicaciones h1 {
+    font-size: 4vw;
+  }
+  #indicaciones h2 {
+    font-size: 3vw;
+  }
+  #tarifa h3 {
+    font-size: 2.5vw;
+  }
+  button {
+    width: 80%;
+    height: auto;
+  }
+  button p {
+    font-size: 2vw;
+  }
+}
