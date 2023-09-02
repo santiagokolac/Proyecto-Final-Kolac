@@ -98,9 +98,13 @@ function alturaPersona() {
 
     input.addEventListener("change", function (event) {
       let altura = parseInt(event.target.value);
-      alturas.push(altura);
-
-      inputsCompletados++;
+      if (altura >= 54 && altura <= 251) {
+        alturas.push(altura);
+        inputsCompletados++;
+      } else {
+        Swal.fire("La altura debe estar entre 54 y 251 centímetros.");
+        event.target.value = "";
+      }
 
       if (inputsCompletados === cantidadPersonas) {
         document.getElementById("alturaBtn").disabled = false;
@@ -114,8 +118,6 @@ function alturaPersona() {
 
   document.getElementById("alturaBtn").addEventListener("click", edadPersona);
 }
-
-/* Ingreso de la edad de las personas que, al cumplir con la altura requerida, sí pueden ingresar */
 
 function edadPersona() {
   document.getElementById("alturaPersona").style.display = "none";
@@ -155,7 +157,12 @@ function edadPersona() {
 
     input.addEventListener("change", function (event) {
       let edad = parseInt(event.target.value);
-      inputsCompletados++;
+      if (edad >= 0 && edad <= 118) {
+        inputsCompletados++;
+      } else {
+        Swal.fire("La edad debe estar entre 0 y 118 años.");
+        event.target.value = "";
+      }
 
       if (inputsCompletados === personasQueEntran.length) {
         document.getElementById("edadBtn").disabled = false;
