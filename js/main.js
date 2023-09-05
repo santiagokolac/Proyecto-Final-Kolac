@@ -1,3 +1,5 @@
+/* Declaración de variables y arrays */
+
 let cantidadPersonas;
 
 let alturas = [];
@@ -7,6 +9,9 @@ let mayores = [];
 let menores = [];
 
 let boton = document.getElementById("queueBtn");
+
+/* Eventos */
+
 boton.addEventListener("click", largoFila);
 
 document.getElementById("climaBtn").addEventListener("click", obtenerClima);
@@ -29,6 +34,8 @@ async function obtenerClima() {
     console.error("Error al obtener el clima:", error);
   }
 }
+
+/* Muestra de datos climáticos utilizando API OpenWeatherMap */
 
 function mostrarClima(data) {
   const { main, weather, name } = data;
@@ -122,6 +129,8 @@ function alturaPersona() {
   document.getElementById("alturaBtn").addEventListener("click", edadPersona);
 }
 
+/* Ingreso de la edad de las personas que entran a la montaña rusa */
+
 function edadPersona() {
   document.getElementById("alturaPersona").style.display = "none";
   document.getElementById("alturaBtn").style.display = "none";
@@ -202,15 +211,9 @@ function edadPersona() {
   document.getElementById("edadBtn").addEventListener("click", ganancias);
 }
 
-function simularDelay(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
-
 /* Cálculo de ganancias */
 
-async function ganancias() {
+function ganancias() {
   document.getElementById("edadPersona").style.display = "none";
   document.getElementById("edadBtn").style.display = "none";
   document.getElementById("ganancias").style.display = "block";
@@ -233,8 +236,6 @@ async function ganancias() {
   div.appendChild(wageTxt);
 
   document.getElementById("ganancias").appendChild(div);
-
-  await simularDelay(2000);
 
   setTimeout(() => {
     document.getElementById("resetBtn").disabled = false;
