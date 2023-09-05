@@ -102,7 +102,10 @@ function alturaPersona() {
         alturas.push(altura);
         inputsCompletados++;
       } else {
-        Swal.fire("La altura debe estar entre 54 y 251 centímetros.");
+        Swal.fire(
+          "La altura ingresada debe encontrarse en el rango de 54 y 251 centímetros.",
+          "Por favor ingrese un valor de altura permitido."
+        );
         event.target.value = "";
       }
 
