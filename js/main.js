@@ -163,7 +163,10 @@ function edadPersona() {
       if (edad >= 0 && edad <= 118) {
         inputsCompletados++;
       } else {
-        Swal.fire("La edad debe estar entre 0 y 118 años.");
+        Swal.fire(
+          "La edad ingresada debe encontrarse en el rango de 0 y 118 años.",
+          "Por favor ingrese un valor de edad permitido."
+        );
         event.target.value = "";
       }
 
